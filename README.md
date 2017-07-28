@@ -51,3 +51,50 @@ $ cd clair/contrib/k8s
 $ kubectl create secret generic clairsecret --from-file=./config.yaml
 $ kubectl create -f clair-kubernetes.yaml
 ```
+
+# Clairctl installation
+
+```bash
+curl -L https://raw.githubusercontent.com/jgsqware/clairctl/master/install.sh | sh
+```
+
+# Reporting
+
+**clairctl** get vulnerabilities report from Clair and generate HTML report
+
+clairctl can be used for Docker Hub and self-hosted Registry
+
+# Commands
+
+```
+Analyze your docker image with Clair, directly from your registry.
+
+Usage:
+  clairctl [command]
+
+Available Commands:
+  analyze     Analyze Docker image
+  health      Get Health of clairctl and underlying services
+  pull        Pull Docker image information (This will not pull the image !)
+  push        Push Docker image to Clair
+  report      Generate Docker Image vulnerabilities report
+  version     Get Versions of clairctl and underlying services
+
+Flags:
+      --config string      config file (default is ./.clairctl.yml)
+      --log-level string   log level [Panic,Fatal,Error,Warn,Info,Debug]
+
+Use "clairctl [command] --help" for more information about a command.
+```
+
+# Optional Configuration
+
+```yaml
+clair:
+  port: 6060
+  healthPort: 6061
+  uri: http://clair
+  report:
+    path: ./reports
+    format: html
+```
