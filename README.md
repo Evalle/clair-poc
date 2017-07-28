@@ -58,13 +58,13 @@ $ kubectl create -f clair-kubernetes.yaml
 curl -L https://raw.githubusercontent.com/jgsqware/clairctl/master/install.sh | sh
 ```
 
-# Reporting
+## Reporting
 
 **clairctl** get vulnerabilities report from Clair and generate HTML report
 
 clairctl can be used for Docker Hub and self-hosted Registry
 
-# Commands
+## Commands
 
 ```
 Analyze your docker image with Clair, directly from your registry.
@@ -87,7 +87,7 @@ Flags:
 Use "clairctl [command] --help" for more information about a command.
 ```
 
-# Optional Configuration
+## Optional Configuration
 
 ```yaml
 clair:
