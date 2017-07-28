@@ -3,7 +3,7 @@ POC for clair (https://github.com/coreos/clair) + clairctl (https://github.com/j
 
 # Installation
 
-## Docker Distribution (ex Docker Registry)
+## Docker Distribution (ex Docker Registry) setup
 Run the local copy of Docker Registry (Distributuon)
 ```bash
 $ docker run -d -p 5000:5000 --name registry registry:2
@@ -20,9 +20,9 @@ and restart Docker daemon
 $ systemctl daemon-reload
 $ systemclt restart docker
 ```
+Then you can either use docker-compose way or run each container separately
 
 ## Docker-compose
-
 
 ```bash
 $ curl -L https://raw.githubusercontent.com/coreos/clair/master/docker-compose.yml -o $HOME/docker-compose.yml
